@@ -1,0 +1,31 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: exercise2-resource-server-jwt
+
+# Shared HMAC secret used both to validate incoming tokens (JwtDecoderConfig)
+# and to sign test tokens (TokenGenerator). Must be identical in both places
+# and at least 32 characters (256 bits) for HS256.
+app:
+  jwt:
+    secret: this-is-a-demo-secret-key-change-me-1234567890
+
+logging:
+  level:
+    org.springframework.security: INFO
+
+# --- Alternative: pointing at a real Authorization Server ---
+# If you have an actual OIDC provider (Okta, Auth0, Keycloak, Spring
+# Authorization Server, etc.), swap the JwtDecoderConfig bean out and use
+# this instead - Spring Security will auto-discover the JWK Set endpoint
+# and handle signature verification for you:
+#
+# spring:
+#   security:
+#     oauth2:
+#       resourceserver:
+#         jwt:
+#           issuer-uri: https://issuer.example.com
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!--
+    This mapping file is the heart of "XML Configuration" style Hibernate.
+    It tells Hibernate how the Student class maps onto the STUDENT table,
+    entirely outside of the Java class itself.
+-->
+<hibernate-mapping package="com.bootcamp.hibernatexml">
+    <class name="Student" table="STUDENT">
+        <id name="id" column="ID" type="long">
+            <generator class="native"/>
+        </id>
+        <property name="firstName" column="FIRST_NAME" type="string" not-null="true"/>
+        <property name="lastName" column="LAST_NAME" type="string" not-null="true"/>
+        <property name="email" column="EMAIL" type="string"/>
+    </class>
+</hibernate-mapping>

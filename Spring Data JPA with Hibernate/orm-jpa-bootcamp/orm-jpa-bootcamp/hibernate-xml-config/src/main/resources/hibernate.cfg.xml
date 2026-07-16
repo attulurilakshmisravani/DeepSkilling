@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- JDBC connection settings (H2 in-memory database for this demo) -->
+        <property name="hibernate.connection.driver_class">org.h2.Driver</property>
+        <property name="hibernate.connection.url">jdbc:h2:mem:xmldb;DB_CLOSE_DELAY=-1</property>
+        <property name="hibernate.connection.username">sa</property>
+        <property name="hibernate.connection.password"></property>
+
+        <!-- Dialect: this is what makes Hibernate database-independent -
+             swap this one line (and the JDBC URL/driver above) to target
+             MySQL, PostgreSQL, Oracle, etc. without touching any Java code. -->
+        <property name="hibernate.dialect">org.hibernate.dialect.H2Dialect</property>
+
+        <!-- Auto create/update schema from the mapping on startup -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Show generated SQL in the console -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- The XML mapping file for the Student entity -->
+        <mapping resource="Student.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>
