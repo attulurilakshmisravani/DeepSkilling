@@ -1,0 +1,18 @@
+/* Global styles for the Student Course Portal */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f4f6f8;
+  color: #1c1c1e;
+}
+button {
+  cursor: pointer;
+}
+/* Angular form-state classes (Hands-On 4) */
+.ng-invalid.ng-touched {
+  border-color: #d93025 !important;
+}
+.ng-valid.ng-touched {
+  border-color: #1e8e3e !important;
+}

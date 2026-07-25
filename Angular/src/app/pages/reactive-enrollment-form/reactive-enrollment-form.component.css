@@ -1,0 +1,4 @@
+.field { margin-bottom: 14px; display: flex; flex-direction: column; gap: 4px; }
+.array-row { display: flex; gap: 8px; margin-bottom: 6px; }
+.error { color: #d93025; font-size: 0.85em; }
+input, select { padding: 6px; border: 1px solid #ccc; border-radius: 4px; }

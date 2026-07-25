@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: exercise3-jwt-auth-flow
+
+app:
+  jwt:
+    # Must be at least 32 characters (256 bits) for HS256.
+    secret: this-is-a-demo-secret-key-change-me-1234567890
+    expiration-ms: 3600000   # 1 hour
+
+logging:
+  level:
+    org.springframework.security: INFO
