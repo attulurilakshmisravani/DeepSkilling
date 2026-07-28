@@ -1,0 +1,4 @@
+This file was added on the GitNewBranch feature branch.
+
+It demonstrates creating content on a branch before merging it back
+into master/trunk.

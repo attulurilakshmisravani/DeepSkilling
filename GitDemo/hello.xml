@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<greeting>
+    <message>Hi there from master branch / Hello World from GitWork branch</message>
+    <version>1.0</version>
+    <author>Feature Team</author>
+</greeting>

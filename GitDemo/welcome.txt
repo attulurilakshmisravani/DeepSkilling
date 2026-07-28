@@ -1,0 +1,5 @@
+Welcome to GitDemo! (updated on GitNewBranch)
+
+This is my first file added to a Git repository as part of the
+Cognizant Git hands-on lab.
+Remote-side update from a teammate's push.
